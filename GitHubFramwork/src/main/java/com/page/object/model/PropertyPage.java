@@ -42,7 +42,7 @@ public class PropertyPage {
 	public List<WebElement> getHomeprice() {
 		return Homeprice;
 	}
-	@FindBy(xpath="(//img[@alt='Parkmove'])[1]")
+	@FindBy(xpath="//img[@class='js-lazy-loaded']")////img[@class='js-lazy-loaded']
 	private WebElement PropertyLogo;
 	
 	public WebElement getPropertyLogo() {

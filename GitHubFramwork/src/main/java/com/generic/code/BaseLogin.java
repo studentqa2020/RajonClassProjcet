@@ -46,12 +46,13 @@ public class BaseLogin {
 		// click Sign_In
 		new Highlighter().getcolor(driver, Login.getSignBnt());
 		Login.getSignBnt().click();
-		// Thread.sleep(3000);
+		
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
 
 		// click Email
-		// new Wait().getExplicitWait(driver, Email);
+		
+		Wait.getExplicitWaitClicable(driver, Login.getEmail());
 		new Highlighter().getcolor(driver, Login.getEmail(), "yellow");
 		Login.getEmail().sendKeys(BaseConfig.getconfig("Email"));
 		System.out.println(driver.getCurrentUrl());
@@ -60,9 +61,8 @@ public class BaseLogin {
 		// Click Password
 		new Highlighter().getcolor(driver, Login.getPassword(), "black");
 		Login.getPassword().sendKeys(BaseConfig.getconfig("Password"));
-		//Thread.sleep(3000);
+		// Thread.sleep(3000);
 		Wait.getExplicitWaitClicable(driver, Login.getPassword());
-		// new ExplicitWait().getExplicitWait( driver , Login.getPassword());
 
 		// ScreenShort
 		TakeAppScreenShot.captureScreenShot(driver, "Login success");
@@ -74,5 +74,9 @@ public class BaseLogin {
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
 
+	}
+
+	public static void main(String[] args) throws Throwable {
+		new BaseLogin().GetLogin();
 	}
 }
