@@ -83,7 +83,7 @@ public class SearchHome extends BaseLogin {
 		TakeAppScreenShot.captureScreenShot(driver, "Sign Out");
 		MyProperty.getSignOut().click();
 	}
-	public static void main(String[] args) throws Throwable {
-		getHomeprice();
-	}
+//	public static void main(String[] args) throws Throwable {
+//		getHomeprice();
+//	}
 }
