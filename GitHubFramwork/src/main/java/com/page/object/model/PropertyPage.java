@@ -14,7 +14,7 @@ public class PropertyPage {
 
 	}
 	
-	@FindBy(xpath = "//*[@type='text']")
+	@FindBy(xpath = "//*[@type='text']")//"//*[@type='text']"
 	private WebElement NewYork;
 
 	public WebElement getNewYork() {
@@ -22,21 +22,21 @@ public class PropertyPage {
 
 	}
 
-	@FindBy(xpath = "//*[@class='ui-icon ui-form__search']")
+	@FindBy(xpath = "//*[@class='button button--primary']") //"//*[@value='Search']
 	private WebElement Search;
 
 	public WebElement getSearch() {
 		return Search;
 	}
 	
-	@FindBy(xpath = "//*[@value='Search']")
-	private WebElement Value;
+//	@FindBy(xpath = "//a[@class='listing-results-price text-price']")////*[@class='listing-results-price text-price']"
+//	private List<WebElement> Value;
+//	
+//	public List<WebElement> getValue() {
+//		return Value;
+//	}
 	
-	public WebElement getValue() {
-		return Value;
-	}
-	
-	@FindBy(xpath = "//*[@class='listing-results-price text-price']")
+	@FindBy(xpath = "//*[@class='listing-results-price text-price']") //"(//img[@alt='Parkmove'])[1]"
 	private List<WebElement> Homeprice;
 	
 	public List<WebElement> getHomeprice() {
@@ -55,21 +55,21 @@ public class PropertyPage {
 		return AgentName;
 	}
 	
-	@FindBy(xpath="(//*[@class='ui-link'])[4]")
+	@FindBy(xpath="(//*[@class='ui-link'])[4]") ////*[@class='ui-link'])[4]"
 	private WebElement AgentPhoneNum;
 	
 	public WebElement getAgentPhoneNum() {
 		return AgentPhoneNum;
 	}
 	
-	@FindBy(xpath="//*[@id='header-account-panel__signed-in-link']")
+	@FindBy(xpath="//*[@class='css-1mjljx5 eson0er0']//*[text()='My Zoopla']") // "//*[@class='css-1mjljx5 eson0er0']//*[text()='My Zoopla']"
 	private WebElement MyZooplaBtn;
 	
 	public WebElement getMyZooplaBtn() {
 		return MyZooplaBtn;
 	}
 	
-	@FindBy(xpath="//span[contains(text(),'Sign out')]")
+	@FindBy(xpath="(//div[@content='Sign out'])[1]")  //"(//div[@content='Sign out'])[1]"
 	private WebElement SignOut;
 	
 	public WebElement getSignOut() {

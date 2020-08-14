@@ -19,7 +19,7 @@ public class LoginPage {
 		return Cookies;
 	}
 
-	@FindBy(xpath = "//*[@class='button button--tertiary-dark account-link__text']")
+	@FindBy(xpath = "(//*[@data-testid ='header-profile-sign-in'])[1]")
 	private WebElement SignBnt;
 
 	public WebElement getSignBnt() {
@@ -27,14 +27,14 @@ public class LoginPage {
 
 	}
 
-	@FindBy(xpath = "//*[@name='signin_email']")
+	@FindBy(xpath = "//*[@id='signin_email']")
 	private WebElement Email;
 
 	public WebElement getEmail() {
 		return Email;
 	}
 
-	@FindBy(xpath = " //*[@name='signin_password']")
+	@FindBy(xpath = "//*[@id='signin_password']")
 	private WebElement Password;
 
 	public WebElement getPassword() {
@@ -42,7 +42,7 @@ public class LoginPage {
 
 	}
 
-	@FindBy(xpath = " //*[@value='Sign in']")
+	@FindBy(xpath =  "//*[@id='signin_submit']")
 	private WebElement Submited;
 
 	public WebElement getSubmited() {

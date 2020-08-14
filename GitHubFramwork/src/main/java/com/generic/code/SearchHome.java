@@ -13,6 +13,7 @@ import com.util.Highlighter;
 import com.util.TakeAppScreenShot;
 import com.util.Wait;
 
+
 public class SearchHome extends BaseLogin {
 
 
@@ -29,13 +30,12 @@ public class SearchHome extends BaseLogin {
 		MyProperty.getNewYork().sendKeys(BaseConfig.getconfig("Loaction"));
 
 		// ClickSearch
-		new Highlighter().getcolor(driver, MyProperty.getSearch(), "green");
+		Highlighter.getcolor(driver, MyProperty.getSearch(), "green");
 		MyProperty.getSearch().click();
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
-		// Seacrch
-		new Highlighter().getcolor(driver, MyProperty.getSearch(), "blue");
-		MyProperty.getValue().click();
+		
+		// Get the properties
 		
 		// House price
 		String[] Price;
@@ -82,6 +82,7 @@ public class SearchHome extends BaseLogin {
 		Highlighter.getcolor(driver, MyProperty.getSignOut(), "yellow");
 		TakeAppScreenShot.captureScreenShot(driver, "Sign Out");
 		MyProperty.getSignOut().click();
+		
 	}
 //	public static void main(String[] args) throws Throwable {
 //		getHomeprice();
